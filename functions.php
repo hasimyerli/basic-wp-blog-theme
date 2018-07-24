@@ -35,4 +35,8 @@ function wpn_content_limit($content, $ilimit = false)
 add_theme_support('post-thumbnails');
 /*öne çıkan resim*/
 
+function modify_read_more_link() {
+ return '<small><a class="more-link" href="' . get_permalink() . '">Devamını Oku</a></small>';
+}
+add_filter( 'the_content_more_link', 'modify_read_more_link' );
 ?>
